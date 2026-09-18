@@ -1,27 +1,50 @@
 const menuButton = document.querySelector('.menu-button');
-const navigation = document.querySelector('.site-nav');
+const mobileMenu = document.querySelector('.mobile-menu');
 
 menuButton?.addEventListener('click', () => {
-  const isOpen = navigation.classList.toggle('is-open');
+  const isOpen = mobileMenu.classList.toggle('is-open');
   menuButton.setAttribute('aria-expanded', String(isOpen));
-  menuButton.querySelector('.sr-only').textContent = isOpen ? 'Close navigation' : 'Open navigation';
+  menuButton.querySelector('.sr-only').textContent = isOpen ? 'Close menu' : 'Open menu';
 });
 
-navigation?.querySelectorAll('a').forEach((link) => {
-  link.addEventListener('click', () => {
-    navigation.classList.remove('is-open');
-    menuButton?.setAttribute('aria-expanded', 'false');
+mobileMenu?.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => {
+  mobileMenu.classList.remove('is-open');
+  menuButton?.setAttribute('aria-expanded', 'false');
+}));
+
+const filters = document.querySelectorAll('.filter');
+const projects = document.querySelectorAll('.project');
+
+filters.forEach((filter) => filter.addEventListener('click', () => {
+  const selected = filter.dataset.filter;
+  filters.forEach((item) => item.classList.toggle('is-active', item === filter));
+  projects.forEach((project) => {
+    project.hidden = selected !== 'all' && project.dataset.category !== selected;
   });
-});
+}));
+
+const sections = [...document.querySelectorAll('.page-section[id]')];
+const navLinks = [...document.querySelectorAll('.rail-nav a')];
+const sectionObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (!entry.isIntersecting) return;
+    navLinks.forEach((link) => link.classList.toggle('is-active', link.getAttribute('href') === `#${entry.target.id}`));
+  });
+}, { rootMargin: '-25% 0px -65% 0px' });
+sections.forEach((section) => sectionObserver.observe(section));
 
 document.querySelector('#year').textContent = new Date().getFullYear();
 
-if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-  const observer = new IntersectionObserver(
-    (entries) => entries.forEach((entry) => entry.isIntersecting && entry.target.classList.add('is-visible')),
-    { threshold: 0.12 }
-  );
-  document.querySelectorAll('.reveal').forEach((element) => observer.observe(element));
-} else {
-  document.querySelectorAll('.reveal').forEach((element) => element.classList.add('is-visible'));
-}
+const form = document.querySelector('#contact-form');
+const formNote = document.querySelector('.form-note');
+form?.addEventListener('submit', (event) => {
+  event.preventDefault();
+  const values = new FormData(form);
+  const name = values.get('name').trim();
+  const email = values.get('email').trim();
+  const message = values.get('message').trim();
+  const subject = encodeURIComponent(`Website message from ${name}`);
+  const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`);
+  formNote.textContent = 'Opening your email client…';
+  window.location.href = `mailto:lucamoresca12@gmail.com?subject=${subject}&body=${body}`;
+});

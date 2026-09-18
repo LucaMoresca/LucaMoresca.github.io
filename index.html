@@ -3,174 +3,136 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Luca Moresca — Computer Science graduate student and researcher working across machine learning, language models, and digital imaging."
-    />
-    <meta name="theme-color" content="#0a0f18" />
+    <meta name="description" content="Luca Moresca — Computer Science graduate student, researcher and lecturer working across machine learning, language models, computer vision and digital imaging." />
+    <meta name="theme-color" content="#0b0d0f" />
     <title>Luca Moresca — Computer Science & Research</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Instrument+Sans:wdth,wght@75..100,400..700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
 
-    <header class="topbar">
-      <a class="wordmark" href="#top" aria-label="Luca Moresca home">
-        <span class="wordmark-mark">LM</span>
-        <span>Luca Moresca</span>
-      </a>
-      <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-nav">
-        <span class="sr-only">Open navigation</span>
-        <span></span><span></span>
+    <aside class="rail" aria-label="Site navigation">
+      <a class="rail-name" href="#top">luca<br />moresca</a>
+      <nav class="rail-nav">
+        <a href="#about"><span>01.</span> about</a>
+        <a href="#skills"><span>02.</span> skills</a>
+        <a href="#experience"><span>03.</span> experience</a>
+        <a href="#projects"><span>04.</span> projects</a>
+        <a href="#research"><span>05.</span> research</a>
+        <a href="#contact"><span>06.</span> contact</a>
+      </nav>
+      <a class="resume-link" href="resume.pdf" target="_blank" rel="noreferrer">resume.pdf <span>↓</span></a>
+      <p class="rail-mark">~<br />$</p>
+    </aside>
+
+    <header class="mobile-header">
+      <a href="#top">luca moresca</a>
+      <button class="menu-button" type="button" aria-controls="mobile-menu" aria-expanded="false">
+        <span class="sr-only">Open menu</span><i></i><i></i>
       </button>
-      <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
-        <a href="#about">About</a>
-        <a href="#work">Work</a>
-        <a href="#experience">Experience</a>
-        <a href="#contact">Contact</a>
-        <a class="nav-github" href="https://github.com/LucaMoresca" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+      <nav id="mobile-menu" class="mobile-menu" aria-label="Mobile navigation">
+        <a href="#about">01. about</a><a href="#skills">02. skills</a><a href="#experience">03. experience</a><a href="#projects">04. projects</a><a href="#research">05. research</a><a href="#contact">06. contact</a><a href="resume.pdf" target="_blank" rel="noreferrer">resume.pdf ↓</a>
       </nav>
     </header>
 
-    <main id="main">
-      <section id="top" class="hero section-shell">
-        <div class="hero-copy reveal">
-          <p class="eyebrow"><span class="status-dot"></span> Rome, Italy · available for research collaborations</p>
-          <h1>Building reliable ways to <em>see</em> and <em>reason.</em></h1>
-          <p class="hero-lede">
-            I am Luca Moresca, a Computer Science graduate student at Sapienza University of Rome.
-            My work spans machine learning, large language models, computer vision, and digital imaging.
-          </p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="#work">Explore selected work <span aria-hidden="true">↓</span></a>
-            <a class="text-link" href="mailto:lucamoresca12@gmail.com">Get in touch <span aria-hidden="true">↗</span></a>
+    <main id="main" class="content">
+      <section id="top" class="hero">
+        <div class="terminal-line"><span>~</span><span>$</span><span>whoami</span></div>
+        <h1>Luca<br />Moresca<span class="cursor" aria-hidden="true">_</span></h1>
+        <p class="hero-copy">I work at the intersection of <strong>machine learning, language models, and digital imaging.</strong> Computer Science graduate student at Sapienza and research collaborator at PINlab, with a background that runs from visual media to technical AI research.</p>
+        <div class="hero-links">
+          <a class="button" href="#projects">View work <span>↓</span></a>
+          <a href="https://github.com/LucaMoresca" target="_blank" rel="noreferrer">GitHub <span>↗</span></a>
+          <a href="https://www.linkedin.com/in/luca-moresca/" target="_blank" rel="noreferrer">LinkedIn <span>↗</span></a>
+        </div>
+        <a class="scroll-hint" href="#about">scroll <span>↓</span></a>
+      </section>
+
+      <section id="about" class="page-section">
+        <p class="section-kicker">01 · about</p>
+        <div class="section-intro">
+          <h2>AI and visual systems,<br />from research to teaching.</h2>
+          <p class="file-label">bio.txt — ~/luca</p>
+        </div>
+        <article class="terminal-card">
+          <p class="terminal-command">luca@research:~$ cat bio.txt</p>
+          <div class="prose">
+            <p>I'm a Computer Science graduate student and research collaborator interested in the behaviour of intelligent systems. My current work at PINlab, Sapienza University of Rome, examines large language models, bias analysis, efficient generation methods, and evaluation protocols.</p>
+            <p>Before moving into AI research, I trained in Media Science and Technology and developed a practical foundation in digital image processing, post-production, and computer vision. I now teach the third module of <em>Digital Cinematography + Digital Image Processing</em> at the University of Rome Tor Vergata, bringing together theory, perception, colour, and hands-on practice.</p>
+            <p>I enjoy problems where rigorous modelling meets a clear visual or human-facing outcome — whether that means probing language-model behaviour, building an experiment pipeline, or making images work harder.</p>
           </div>
-        </div>
-        <div class="hero-visual reveal" aria-label="Abstract visual inspired by image processing and machine learning" role="img">
-          <div class="visual-grid"></div>
-          <div class="visual-orbit orbit-one"></div>
-          <div class="visual-orbit orbit-two"></div>
-          <div class="visual-core"><span>LM</span></div>
-          <p class="visual-caption"><span>01</span> Image · model · meaning</p>
-        </div>
-      </section>
-
-      <section id="about" class="section-shell about-section">
-        <div class="section-label reveal"><span>01</span><span>About</span></div>
-        <div class="about-grid">
-          <div class="about-statement reveal">
-            <h2>Research-led, visually minded, technically grounded.</h2>
-            <p>
-              I combine a background in digital media with a rigorous Computer Science education. I am interested in how intelligent systems represent information, how their behaviour can be evaluated, and how visual technologies can make complex ideas clearer.
-            </p>
-          </div>
-          <aside class="profile-card reveal">
-            <div class="profile-avatar" aria-hidden="true">LM</div>
-            <div>
-              <p class="profile-name">Luca Moresca</p>
-              <p class="profile-role">M.Sc. Computer Science</p>
-            </div>
-            <dl>
-              <div><dt>Based in</dt><dd>Rome, Italy</dd></div>
-              <div><dt>Focus</dt><dd>AI &amp; LLM research</dd></div>
-              <div><dt>Expected degree</dt><dd>October 2026</dd></div>
-            </dl>
-          </aside>
-        </div>
-        <div class="skills-row reveal" aria-label="Research interests">
-          <span>Machine Learning</span>
-          <span>Large Language Models</span>
-          <span>Computer Vision</span>
-          <span>Digital Image Processing</span>
-          <span>Human–Computer Interaction</span>
+        </article>
+        <div class="stats-grid" aria-label="Academic highlights">
+          <article><strong>110/110</strong><span>B.Sc. Media Science &amp; Technology — cum laude</span></article>
+          <article><strong>29.43/30</strong><span>M.Sc. Computer Science — current weighted average</span></article>
+          <article><strong>2</strong><span>Scientific papers — one accepted, one under review</span></article>
+          <article><strong>2026</strong><span>Expected M.Sc. graduation — October</span></article>
         </div>
       </section>
 
-      <section id="work" class="section-shell work-section">
-        <div class="section-label reveal"><span>02</span><span>Selected work</span></div>
-        <div class="work-heading reveal">
-          <h2>Research and projects at the intersection of learning systems and creative technology.</h2>
-          <a class="text-link" href="https://github.com/LucaMoresca" target="_blank" rel="noreferrer">View all repositories <span aria-hidden="true">↗</span></a>
-        </div>
-        <div class="project-grid">
-          <article class="project-card featured reveal">
-            <div class="project-number">01</div>
-            <div class="project-art research-art" aria-hidden="true"><span class="signal signal-a"></span><span class="signal signal-b"></span><span class="signal signal-c"></span></div>
-            <div class="project-content">
-              <p class="project-kind">Research · 2026</p>
-              <h3>Quantifying Self-Preservation Bias in Large Language Models</h3>
-              <p>Research on evaluation-aware behaviour and self-preservation bias in language models, developed at PINlab, Sapienza University of Rome.</p>
-              <div class="tag-list"><span>LLMs</span><span>Evaluation</span><span>AI Safety</span></div>
-            </div>
-          </article>
-
-          <article class="project-card reveal">
-            <div class="project-number">02</div>
-            <div class="project-art geo-art" aria-hidden="true"><span></span><span></span><span></span></div>
-            <div class="project-content">
-              <p class="project-kind">Open source · Python</p>
-              <h3>VQ-VAE Geodesic Project</h3>
-              <p>Experiments with VQ-VAE pipelines, geodesic quantization, and generative priors for image data.</p>
-              <a class="card-link" href="https://github.com/LucaMoresca/vqvae_geodesic_project" target="_blank" rel="noreferrer">Open repository <span aria-hidden="true">↗</span></a>
-            </div>
-          </article>
-
-          <article class="project-card reveal">
-            <div class="project-number">03</div>
-            <div class="project-art type-art" aria-hidden="true"><span>SCI</span><span>ENCE</span></div>
-            <div class="project-content">
-              <p class="project-kind">Open source · Python</p>
-              <h3>Improve Science Writing</h3>
-              <p>A practical toolset for revising scientific writing with a focus on structure, flow, and clarity.</p>
-              <a class="card-link" href="https://github.com/LucaMoresca/improve-science-writing" target="_blank" rel="noreferrer">Open repository <span aria-hidden="true">↗</span></a>
-            </div>
-          </article>
+      <section id="skills" class="page-section">
+        <p class="section-kicker">02 · skills</p>
+        <div class="section-intro"><h2>Tools I reach for.</h2></div>
+        <div class="stack-list">
+          <article><p>[0]</p><div><h3>Languages &amp; scientific computing</h3><ul><li>Python</li><li>Jupyter</li><li>LaTeX</li><li>Git</li></ul></div></article>
+          <article><p>[1]</p><div><h3>ML &amp; deep learning</h3><ul><li>PyTorch</li><li>VQ-VAE</li><li>Fine-tuning</li><li>Generative models</li></ul></div></article>
+          <article><p>[2]</p><div><h3>LLM research</h3><ul><li>LLM evaluation</li><li>Activation steering</li><li>vLLM</li><li>Inspect AI</li><li>Bias analysis</li></ul></div></article>
+          <article><p>[3]</p><div><h3>Vision &amp; media</h3><ul><li>Computer vision</li><li>Digital image processing</li><li>Adobe Photoshop</li><li>Adobe Lightroom</li><li>Unity post-processing</li></ul></div></article>
         </div>
       </section>
 
-      <section id="experience" class="section-shell experience-section">
-        <div class="section-label reveal"><span>03</span><span>Experience</span></div>
-        <div class="timeline">
-          <article class="timeline-entry reveal">
-            <p class="timeline-date">2026 — present</p>
-            <div><h3>Research collaborator · AFC, PINlab</h3><p>Sapienza University of Rome · Research on LLMs, bias analysis, efficient generation methods, and evaluation protocols under Prof. Fabio Galasso.</p></div>
-          </article>
-          <article class="timeline-entry reveal">
-            <p class="timeline-date">2025 — present</p>
-            <div><h3>Adjunct professor</h3><p>University of Rome Tor Vergata · Teaching the third module of Digital Cinematography + Digital Image Processing.</p></div>
-          </article>
-          <article class="timeline-entry reveal">
-            <p class="timeline-date">2024 — 2026</p>
-            <div><h3>M.Sc. in Computer Science</h3><p>Sapienza University of Rome · Current weighted average: 29.43/30. Expected graduation: October 2026.</p></div>
-          </article>
-          <article class="timeline-entry reveal">
-            <p class="timeline-date">2020 — 2024</p>
-            <div><h3>B.Sc. in Media Science and Technology</h3><p>University of Rome Tor Vergata · 110/110 cum laude. Experimental thesis: <em>Post-Processing in Unity</em>.</p></div>
-          </article>
+      <section id="experience" class="page-section">
+        <p class="section-kicker">03 · experience</p>
+        <div class="section-intro"><h2>Where I've been building.</h2></div>
+        <div class="experience-list">
+          <article><p class="date">Sep 2026 — present</p><div><h3>Research collaborator <span>@ AFC, PINlab</span></h3><p>Research under Prof. Fabio Galasso at Sapienza University of Rome, in collaboration with Indro Spinelli and Matteo Migliarini. My work investigates LLM bias, evaluation awareness, and fast-generation methods, and underpins my Master's thesis.</p></div></article>
+          <article><p class="date">Mar 2025 — present</p><div><h3>Adjunct professor <span>@ Tor Vergata</span></h3><p>Lecturer for the third module of <em>Digital Cinematography + Digital Image Processing</em>. I teach colour management, contrast, and visual perception through theory and work in Adobe Photoshop and Lightroom.</p></div></article>
+          <article><p class="date">Oct 2023 — Jan 2024</p><div><h3>Teaching assistant <span>@ Tor Vergata</span></h3><p>Teaching assistant for the B.Sc. course in Digital Image Processing, supporting students through image-processing concepts and practical applications.</p></div></article>
+          <article><p class="date">Jun 2022 — Oct 2023</p><div><h3>Academic collaborator <span>@ Tor Vergata</span></h3><p>Collaborator within the academic environment of the University of Rome Tor Vergata.</p></div></article>
         </div>
       </section>
 
-      <section id="contact" class="contact-section">
-        <div class="section-shell contact-inner reveal">
-          <p class="eyebrow"><span class="status-dot"></span> Let’s start a conversation</p>
-          <h2>Have a research idea<br />worth exploring?</h2>
-          <a class="button button-light" href="mailto:lucamoresca12@gmail.com">lucamoresca12@gmail.com <span aria-hidden="true">↗</span></a>
+      <section id="projects" class="page-section">
+        <p class="section-kicker">04 · projects</p>
+        <div class="section-intro projects-intro"><div><h2>Selected work.</h2><p>Research-grade experiments and open-source projects. Code lives on GitHub.</p></div></div>
+        <div class="filters" role="group" aria-label="Filter projects">
+          <button class="filter is-active" type="button" data-filter="all">all <span>· 3</span></button><button class="filter" type="button" data-filter="research">llm_research <span>· 1</span></button><button class="filter" type="button" data-filter="generative">generative_ml <span>· 1</span></button><button class="filter" type="button" data-filter="writing">research_tools <span>· 1</span></button>
+        </div>
+        <div class="project-list">
+          <article class="project" data-category="research"><div class="project-side"><p>LLM Research</p><span class="project-index">01</span></div><div><p class="project-type">Research engineering</p><h3>Evaluation Awareness Steering for Self-Preservation Bias</h3><p>A reproducible pipeline that extracts and applies contrastive steering vectors to investigate how evaluation awareness affects self-preservation behaviour in large language models.</p><p class="project-metric">activation steering · vLLM · Inspect AI</p><a href="#research">research <span>↓</span></a></div></article>
+          <article class="project" data-category="generative"><div class="project-side"><p>Generative ML</p><span class="project-index">02</span></div><div><p class="project-type">Open source · Python</p><h3>VQ-VAE Geodesic Project</h3><p>An implementation of a VQ-VAE pipeline with a posteriori geodesic quantization on CIFAR-10, comparing continuous VAE training, geodesic K-Medoids clustering, Transformer priors, and a standard VQ-VAE baseline.</p><p class="project-metric">VQ-VAE · CIFAR-10 · Transformer priors</p><a href="https://github.com/LucaMoresca/vqvae_geodesic_project" target="_blank" rel="noreferrer">code <span>↗</span></a></div></article>
+          <article class="project" data-category="writing"><div class="project-side"><p>Research tools</p><span class="project-index">03</span></div><div><p class="project-type">Open source · Python</p><h3>Improve Science Writing</h3><p>A practical toolset for revising scientific prose with a focus on story structure, paragraph logic, flow, and readable technical communication.</p><p class="project-metric">scientific writing · editing · clarity</p><a href="https://github.com/LucaMoresca/improve-science-writing" target="_blank" rel="noreferrer">code <span>↗</span></a></div></article>
+        </div>
+      </section>
+
+      <section id="research" class="page-section">
+        <p class="section-kicker">05 · research</p>
+        <div class="section-intro"><h2>Publications.</h2></div>
+        <article class="research-feature">
+          <div class="research-art" aria-hidden="true"><span class="node node-one"></span><span class="node node-two"></span><span class="node node-three"></span><i></i><i></i><i></i><b>LLM</b></div>
+          <div class="research-copy"><p class="project-type">Large language models</p><h3>Quantifying Self-Preservation Bias in Large Language Models</h3><p class="research-status">Co-author · Accepted at EMNLP 2026 · PINlab @ Sapienza</p><p>We investigate self-preservation behaviour in language models and the role of evaluation awareness: whether recognising an evaluation changes the model’s observed behaviour. The work includes activation-steering experiments across multiple models and evaluation settings.</p><a href="https://arxiv.org/abs/2604.02174" target="_blank" rel="noreferrer">read on arXiv <span>↗</span></a></div>
+        </article>
+        <article class="publication-row"><p class="project-type">Under review</p><div><h3>Model Priming: Cost-Efficient Unverified Handoffs for Fast LLM Generation</h3><p>Matteo Migliarini, Valerio Santini, Luca Moresca, Indro Spinelli, Fabio Galasso.</p></div></article>
+      </section>
+
+      <section class="resume-section">
+        <div><p class="section-kicker">resume.pdf</p><h2>The short version.</h2><p>Experience, education, research, and the full project list — all in one PDF.</p><a class="button" href="resume.pdf" target="_blank" rel="noreferrer">Download PDF <span>↓</span></a></div>
+        <div class="resume-details"><p><span>2026 — now</span> Research collaborator, PINlab @ Sapienza</p><p><span>2025 — now</span> Adjunct professor, Tor Vergata</p><p><span>M.Sc.</span> Computer Science — 29.43/30 avg</p><p><span>B.Sc.</span> Media Science &amp; Technology — 110/110 cum laude</p></div>
+      </section>
+
+      <section id="contact" class="page-section contact-section">
+        <p class="section-kicker">06 · contact</p>
+        <div class="section-intro"><h2>Let's build something.</h2><p>Open to research collaborations and technically ambitious problems at the intersection of AI, language, and visual computing.</p></div>
+        <div class="contact-grid">
+          <div class="contact-links"><a href="https://www.linkedin.com/in/luca-moresca/" target="_blank" rel="noreferrer"><span>LinkedIn</span><strong>luca-moresca</strong><i>→</i></a><a href="https://github.com/LucaMoresca" target="_blank" rel="noreferrer"><span>GitHub</span><strong>@LucaMoresca</strong><i>→</i></a><a href="mailto:lucamoresca12@gmail.com"><span>Email</span><strong>lucamoresca12@gmail.com</strong><i>→</i></a></div>
+          <form id="contact-form" class="contact-form"><label>Name *<input name="name" autocomplete="name" required placeholder="Your name" /></label><label>Email *<input name="email" type="email" autocomplete="email" required placeholder="you@domain.com" /></label><label>Message *<textarea name="message" required placeholder="What are you working on?"></textarea></label><button class="button" type="submit">Send message <span>↗</span></button><p class="form-note" aria-live="polite"></p></form>
         </div>
       </section>
     </main>
-
-    <footer class="section-shell site-footer">
-      <a class="wordmark" href="#top"><span class="wordmark-mark">LM</span><span>Luca Moresca</span></a>
-      <p>© <span id="year"></span> · Built for the web</p>
-      <a href="https://github.com/LucaMoresca" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a>
-    </footer>
-
+    <footer><span>© <span id="year"></span> Luca Moresca</span><a href="#top">back to top ↑</a></footer>
     <script src="script.js"></script>
   </body>
 </html>
