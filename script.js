@@ -34,5 +34,3 @@ const sectionObserver = new IntersectionObserver((entries) => {
 sections.forEach((section) => sectionObserver.observe(section));
 
 document.querySelector('#year').textContent = new Date().getFullYear();
-
-});
