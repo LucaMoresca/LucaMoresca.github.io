@@ -35,16 +35,4 @@ sections.forEach((section) => sectionObserver.observe(section));
 
 document.querySelector('#year').textContent = new Date().getFullYear();
 
-const form = document.querySelector('#contact-form');
-const formNote = document.querySelector('.form-note');
-form?.addEventListener('submit', (event) => {
-  event.preventDefault();
-  const values = new FormData(form);
-  const name = values.get('name').trim();
-  const email = values.get('email').trim();
-  const message = values.get('message').trim();
-  const subject = encodeURIComponent(`Website message from ${name}`);
-  const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`);
-  formNote.textContent = 'Opening your email client…';
-  window.location.href = `mailto:lucamoresca12@gmail.com?subject=${subject}&body=${body}`;
 });
