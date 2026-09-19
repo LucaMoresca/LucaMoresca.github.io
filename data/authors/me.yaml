@@ -1,0 +1,40 @@
+schema: hugoblox/author/v1
+slug: me
+is_owner: true
+name:
+  display: Luca Moresca
+  given: Luca
+  family: Moresca
+role: Computer Science MSc Student
+bio: |
+  Luca Moresca is a Computer Science MSc student interested in evaluating,
+  understanding, and improving the reliability of large language models.
+  His interests include LLM evaluation, AI safety, model steering, evaluation
+  awareness, and reproducible machine learning systems.
+affiliations:
+  - name: Sapienza University of Rome
+links:
+  - icon: brands/github
+    url: https://github.com/LucaMoresca
+    label: GitHub
+interests:
+  - LLM Evaluation
+  - AI Safety and Reliability
+  - Model Steering and Interpretability
+  - Evaluation Awareness
+  - Benchmarking and Reproducibility
+  - Efficient Inference and ML Systems
+education:
+  - degree: MSc Computer Science
+    institution: Sapienza University of Rome
+    summary: Ongoing.
+  - degree: BSc Media Science and Technology
+    institution: University of Rome Tor Vergata
+    summary: Completed with 110/110 cum laude.
+experience:
+  - role: Research collaborator
+    org: AFC, PINlab, Sapienza University of Rome
+    summary: Research activity on large language models, bias analysis, generation methods, and evaluation protocols.
+  - role: Adjunct professor
+    org: University of Rome Tor Vergata
+    summary: Teaching the Digital Cinematography + Digital Image Processing course module.
