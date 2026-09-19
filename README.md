@@ -1,34 +1,20 @@
-# Luca Moresca — academic portfolio
+# Luca Moresca — personal site
 
-This repository contains Luca Moresca's academic and technical portfolio,
-built with the official HugoBlox Academic CV template and published at
-<https://lucamoresca.github.io/>.
+Minimal static portfolio published at <https://lucamoresca.github.io/>.
+The site is plain HTML, CSS, and JavaScript and is served directly from the
+repository root by GitHub Pages.
 
-The site content is intentionally maintained in Markdown, YAML, and local
-assets. Claims about projects, research, publications, and experience should
-be backed by a source; incomplete records use explicit `TODO` markers.
-
-## Local development
-
-The project uses Hugo Extended and the repository's pinned pnpm lockfile.
-Install the JavaScript dependencies with:
+## Local preview
 
 ```sh
-npx --yes pnpm@10.14.0 install --frozen-lockfile
+python3 -m http.server 8080
 ```
 
-Start a local preview:
+Open <http://localhost:8080>.
 
-```sh
-hugo server -D
-```
+Projects are intentionally text-first. If a project needs a visual later,
+place the local file next to the site assets and add an explicit `<img>` with
+descriptive alt text in the corresponding project markup; no external image
+services are used.
 
-Create the production output:
-
-```sh
-hugo --minify
-```
-
-The GitHub Actions workflow in `.github/workflows/` builds and deploys the
-site to GitHub Pages. Do not commit credentials, private CV data, or local
-environment files.
+Do not add private CV data, credentials, or local environment files.
