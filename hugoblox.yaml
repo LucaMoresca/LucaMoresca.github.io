@@ -1,5 +1,6 @@
 build:
-  hugo_version: '0.162.0'
+  # Hugo 0.166 is required by the current HugoBlox module's link rendering.
+  hugo_version: '0.166.0'
 deploy:
   # Deployment target: github-pages, netlify, vercel, cloudflare, or none
   host: 'github-pages'
